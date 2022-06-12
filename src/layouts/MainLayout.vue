@@ -26,7 +26,7 @@
       <div class="q-mt-xl">
         <q-tabs vertical class="rounded-borders">
           <q-route-tab icon="home" to="/" label="home" />
-          <q-route-tab icon="list" to="/skills" label="skills" />
+          <q-route-tab icon="handyman" to="/skills" label="skills" />
           <q-route-tab icon="work" to="/projects" label="projects" />
           <q-route-tab icon="person" to="/me" label="about me" />
         </q-tabs>
@@ -47,7 +47,7 @@ export default defineComponent({
   components: {},
 
   setup() {
-    const leftDrawerOpen = ref(true);
+    const leftDrawerOpen = ref(false);
 
     return {
       leftDrawerOpen,

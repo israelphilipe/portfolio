@@ -65,7 +65,7 @@ export default defineComponent({
           level: "good",
         },
         {
-          name: "Lavascript",
+          name: "Javascript",
           img: require("assets/javascript.png"),
           level: "good",
         },
