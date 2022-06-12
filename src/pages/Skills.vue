@@ -11,32 +11,56 @@
       <div>
         <div class="text-h5 q-ml-md">
           Programming laguanges
-          <div v-for="(language, index) in languages" :key="index">
-            <SkillCard :skill="language" />
+          <div class="row full-width">
+            <div
+              class="col-md-5 col-12 q-mr-md"
+              v-for="(language, index) in languages"
+              :key="index"
+            >
+              <SkillCard :skill="language" />
+            </div>
           </div>
         </div>
       </div>
       <div>
         <div class="text-h5 q-ml-md">
           Backend frameworks
-          <div v-for="(framework, index) in backendFrameworks" :key="index">
-            <SkillCard :skill="framework" />
+          <div class="row full-width">
+            <div
+              class="col-md-5 col-12 q-mr-md"
+              v-for="(framework, index) in backendFrameworks"
+              :key="index"
+            >
+              <SkillCard :skill="framework" />
+            </div>
           </div>
         </div>
       </div>
       <div>
         <div class="text-h5 q-ml-md">
           Frontend frameworks
-          <div v-for="(framework, index) in frontendFrameorks" :key="index">
-            <SkillCard :skill="framework" />
+          <div class="row full-width">
+            <div
+              class="col-md-5 col-12 q-mr-md"
+              v-for="(framework, index) in frontendFrameorks"
+              :key="index"
+            >
+              <SkillCard :skill="framework" />
+            </div>
           </div>
         </div>
       </div>
       <div>
         <div class="text-h5 q-ml-md">
           Other skills
-          <div v-for="(skill, index) in extra" :key="index">
-            <SkillCard :skill="skill" />
+          <div class="row full-width">
+            <div
+              class="col-md-5 col-12 q-mr-md"
+              v-for="(skill, index) in extra"
+              :key="index"
+            >
+              <SkillCard :skill="skill" />
+            </div>
           </div>
         </div>
       </div>
@@ -72,7 +96,7 @@ export default defineComponent({
       ],
       backendFrameworks: [
         {
-          name: "Django Rest Framework",
+          name: "Django Rest",
           img: require("assets/djangorest.png"),
           level: "good",
         },
@@ -97,7 +121,7 @@ export default defineComponent({
       ],
       extra: [
         {
-          name: "Juno payment gateway",
+          name: "Juno",
           img: require("assets/juno.png"),
           level: "medium",
         },
@@ -107,7 +131,7 @@ export default defineComponent({
           level: "medium",
         },
         {
-          name: "Scrum/agile methodology",
+          name: "Scrum",
           img: require("assets/scrum.svg"),
           level: "good",
         },
