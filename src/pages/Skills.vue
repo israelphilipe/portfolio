@@ -97,6 +97,11 @@ export default defineComponent({
       ],
       extra: [
         {
+          name: "Juno payment gateway",
+          img: require("assets/juno.png"),
+          level: "medium",
+        },
+        {
           name: "Arduino",
           img: require("assets/arduino.png"),
           level: "medium",
