@@ -1,6 +1,6 @@
 <template>
-  <q-page class="flex bg-dark">
-    <div class="bg-dark q-pa-lg full-width text-white text-bold">
+  <q-page class="flex">
+    <div class="q-pa-lg full-width text-bold">
       <q-card-section>
         <div class="hello text-h2 q-my-xl">Hello there</div>
       </q-card-section>

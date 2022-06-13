@@ -1,11 +1,11 @@
 <template>
-  <q-page class="flex bg-dark">
-    <div class="bg-dark q-pa-lg full-width text-white text-bold">
+  <q-page class="flex">
+    <div class="q-pa-lg full-width text-bold">
       <div>
         <div class="hello text-h2 q-my-xl">Projects that i work/worked on</div>
       </div>
       <div>
-        <q-card class="bg-grey-10">
+        <q-card class="">
           <q-card-section class="text-h5">
             <div class="row items-center">
               <q-avatar square size="3em" class="q-mr-md">
@@ -53,7 +53,7 @@
         </q-card>
       </div>
       <div class="q-my-lg">
-        <q-card class="bg-grey-10">
+        <q-card class="">
           <q-card-section class="text-h5">
             <div class="row items-center">
               <q-avatar square size="3em" class="q-mr-md">
@@ -90,7 +90,4 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-a {
-  color: white;
-}
 </style>

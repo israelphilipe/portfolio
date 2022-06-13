@@ -1,18 +1,31 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="bg-dark text-red">
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+    <q-header elevated class="header items-center row justify-between">
+      <div>
+        <q-toolbar>
+          <q-btn
+            flat
+            dense
+            round
+            icon="menu"
+            aria-label="Menu"
+            @click="toggleLeftDrawer"
+          />
 
-        <q-toolbar-title> Israel </q-toolbar-title>
-      </q-toolbar>
+          <q-toolbar-title> Israel </q-toolbar-title>
+        </q-toolbar>
+      </div>
+      <q-btn
+        unelevated
+        class="darkModeBtn"
+        @click="toggleMode"
+        :label="$q.dark.mode ? 'Dark' : 'Light'"
+        icon="lightbulb"
+      ></q-btn>
+      <!-- <div class="cursor-pointer" @click="toggleMode()">
+        {{ $q.dark.mode ? "Dark" : "Light" }}
+        <q-icon class="darkModeIcon" size="2em" name="lightbulb" />
+      </div> -->
     </q-header>
     <q-drawer
       v-model="leftDrawerOpen"
@@ -21,7 +34,7 @@
       :breakpoint="700"
       style=""
       elevated
-      class="bg-dark text-red column q-pt-xl"
+      class="column q-pt-xl"
     >
       <div class="q-mt-xl">
         <q-tabs vertical class="rounded-borders">
@@ -39,7 +52,7 @@
 
 <script>
 import { defineComponent, ref } from "vue";
-
+import { useQuasar } from "quasar";
 export default defineComponent({
   name: "MainLayout",
 
@@ -47,13 +60,18 @@ export default defineComponent({
 
   setup() {
     const leftDrawerOpen = ref(false);
-
+    const $q = useQuasar();
     return {
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
     };
+  },
+  methods: {
+    toggleMode() {
+      this.$q.dark.toggle();
+    },
   },
 });
 </script>

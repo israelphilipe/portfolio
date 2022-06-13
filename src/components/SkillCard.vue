@@ -1,6 +1,6 @@
 <template>
   <q-card
-    class="row q-my-md items-center justify-between rounded-borders bg-grey-9"
+    class="row q-my-md items-center justify-between rounded-borders shadow-10"
   >
     <q-card-section class="row items-center">
       <q-avatar square class="q-mr-md">
