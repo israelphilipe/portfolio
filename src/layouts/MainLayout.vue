@@ -65,7 +65,10 @@ export default defineComponent({
     };
   },
   created() {
-    let dark = localStorage.getItem("darkMode") == "true";
+    let dark =
+      localStorage.getItem("darkMode") == "true" ||
+      localStorage.getItem("darkMode") == null;
+
     this.$q.dark.set(dark);
   },
   methods: {
