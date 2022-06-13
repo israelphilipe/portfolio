@@ -22,10 +22,6 @@
         :label="$q.dark.mode ? 'Dark' : 'Light'"
         icon="lightbulb"
       ></q-btn>
-      <!-- <div class="cursor-pointer" @click="toggleMode()">
-        {{ $q.dark.mode ? "Dark" : "Light" }}
-        <q-icon class="darkModeIcon" size="2em" name="lightbulb" />
-      </div> -->
     </q-header>
     <q-drawer
       v-model="leftDrawerOpen"
@@ -68,9 +64,14 @@ export default defineComponent({
       },
     };
   },
+  created() {
+    let dark = localStorage.getItem("darkMode") == "true";
+    this.$q.dark.set(dark);
+  },
   methods: {
     toggleMode() {
       this.$q.dark.toggle();
+      localStorage.setItem("darkMode", this.$q.dark.mode);
     },
   },
 });
