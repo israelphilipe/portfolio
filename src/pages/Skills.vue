@@ -121,6 +121,16 @@ export default defineComponent({
       ],
       extra: [
         {
+          name: "Docker",
+          img: require("assets/docker.png"),
+          level: "good",
+        },
+        {
+          name: "AWS",
+          img: require("assets/aws.png"),
+          level: "medium",
+        },
+        {
           name: "Juno",
           img: require("assets/juno.png"),
           level: "medium",
