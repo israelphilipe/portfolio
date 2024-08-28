@@ -7,7 +7,7 @@
       <div>
         <div class="text-h4">
           <div>
-            My name is Israel Philipe, i am a 24 years old software developer.
+            My name is Israel Philipe, i am a {{ age }} years old software developer.
             <br />
             At the current moment i work with django using the Rest Framework on
             the backend. <br />
@@ -35,9 +35,7 @@
         <div>Phone : +55 84 998104581</div>
         <div>
           Github :
-          <a href="https://github.com/israelphilipe"
-            >https://github.com/israelphilipe</a
-          >
+          <a href="https://github.com/israelphilipe">https://github.com/israelphilipe</a>
         </div>
       </div>
     </div>
@@ -49,7 +47,19 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "PageIndex",
+  data() {
+    return {
+      age: this.getAgeYear()
+    }
+  },
+  methods: {
+    getAgeYear() {
+      let birthDate = new Date('03/09/1998')
+      let now = new Date()
+      let diff = new Date(now - birthDate)
+      return Math.abs(diff.getUTCFullYear() - 1970)
+    }
+  }
 });
 </script>
-<style scoped>
-</style>
+<style scoped></style>
